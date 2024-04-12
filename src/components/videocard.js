@@ -10,7 +10,7 @@ export const Videocard = (props) => {
     const { obj } = props;
 
     // Access properties of the obj object
-    let { videourl, desc, likes, id, userName, country, category, avatar, url } = obj;
+    let { videourl, desc, likes, id, userName, country, category, avatar, url, userUrl, uniqueId } = obj;
 
     if(country){
       country=country.trim();
@@ -96,10 +96,10 @@ export const Videocard = (props) => {
 
                 <div className='flex flex-row gap-2 items-center justify-center'>
 
-                    <img className='rounded-full' height="30px" width="30px" src={avatar}></img>
+                    <img className='rounded-full' height="30px" width="30px" src={`https://1225507153-tiktok.s3.amazonaws.com/dps/${uniqueId}.jpeg`}></img>
 
                     
-                    <a href={url} target='blank' className='pointer hover:underline'>
+                    <a href={userUrl} target='blank' className='pointer hover:underline'>
                     <div className=' w-20'>{userName}</div>
                     </a>
 

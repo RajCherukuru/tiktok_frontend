@@ -6,7 +6,7 @@ export const Accountcard = (props) => {
 
     const {obj}=props;
 
-    const {name, description, follower_count, following_count, likes, avatar}=obj;
+    const {name, description, follower_count, following_count, likes, avatar, uniqueId}=obj;
 
 
   return (
@@ -17,7 +17,7 @@ export const Accountcard = (props) => {
         <div className='flex gap-8 p-3'>
 
             <div>
-                <img src={avatar}
+                <img src={`https://1225507153-tiktok.s3.amazonaws.com/dps/${uniqueId}.jpeg`}
                     style={{ width: '150px', height: '150px' }}
                     className='rounded-full'
                 ></img>
